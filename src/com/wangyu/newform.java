@@ -1,6 +1,7 @@
 package com.wangyu;
 
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -23,11 +24,45 @@ public class newform extends JFrame {
     }
 
     private JTabbedPane tabbedPane1;
-    private JButton button1;
-    private JTextArea asdasdasdasdTextArea;
-    private JTabbedPane tabbedPane2;
+    private JButton button4;
+    private JButton button5;
+    private JRadioButton 航班RadioButton;
+    private JRadioButton 用户信息RadioButton;
+    private JRadioButton 旅店RadioButton;
+    private JRadioButton 车辆RadioButton;
+    private JTable 编辑区table;
+    private JTable 查询结果table;
+    private JButton 插入Button;
+    private JButton 删除Button;
+    private JButton 更新Button;
+    private JButton 查询Button;
 
     {
+
+        String[][] data = {
+                { "Kundan Kumar Jha", "4031", "CSE" },
+                { "Anand Jha", "6014", "IT" }
+        };
+        JTable tbl = new JTable();
+        DefaultTableModel dtm = new DefaultTableModel(0, 0);
+        String header[] = new String[] { "Prority", "Task Title", "Start",
+                "Pause", "Stop", "Statulses" };
+
+        dtm.setColumnIdentifiers(header);
+        //dtm.setRowCount(1);
+        编辑区table.setModel(dtm);
+
+
+
+        // add row dynamically into the table
+        for (int count = 1; count <= 1; count++) {
+            dtm.addRow(new Object[] { "data", "data", "data",
+                    "data", "data", "data" });
+        }
+
+        //编辑区table.setPreferredScrollableViewportSize(编辑区table.getPreferredSize());
+        //编辑区table.setFillsViewportHeight(true);
+
         String driverName = "oracle.jdbc.OracleDriver"; // for Oracle
         try {
             Class.forName(driverName);
@@ -59,6 +94,26 @@ public class newform extends JFrame {
         }
 
         System.out.println("done");
+    }
+    {
+        DefaultTableModel dtm = new DefaultTableModel(0, 0) {
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                return false;
+            }
+        };
+        String header[] = new String[] { "Prority", "Task Title", "Start",
+                "Pause", "Stop", "Statulses" };
+
+        dtm.setColumnIdentifiers(header);
+        //dtm.setRowCount(1);
+        查询结果table.setModel(dtm);
+
+        // add row dynamically into the table
+        for (int count = 1; count <= 10; count++) {
+            dtm.addRow(new Object[] { "data", "data", "data",
+                    "data", "data", "data" });
+        }
     }
 
     private void createUIComponents() {
