@@ -2,7 +2,6 @@ package com.wangyu;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -13,70 +12,82 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class newform extends JFrame {
-    private JPanel panel1;
+    public JPanel panel1;
+    public JTabbedPane tabbedPane1;
+    public JButton button4;
+    public JButton button5;
+    public JRadioButton tab1航班RadioButton;
+    public JRadioButton tab1用户信息RadioButton;
+    public JRadioButton tab1旅店RadioButton;
+    public JRadioButton tab1车辆RadioButton;
+    public JTable tab1操作区table;
+    public JTable tab1查询结果table;
+    public JButton tab1插入Button;
+    public JButton tab1删除Button;
+    public JButton tab1更新Button;
+    public JButton tab1查询Button;
+    public JTextField textField1;
+    public JTextArea textArea1;
+    public JButton button1;
+    public tab1_t tab1;
+    public Connection connection = null;
+
+    public newform() {
+        tab1= new tab1_t(this);
+        tab1.handle_choose();
+        tab1航班RadioButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                tab1.handle_choose();
+            }
+        });
+        tab1车辆RadioButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                tab1.handle_choose();
+            }
+        });
+        tab1用户信息RadioButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                tab1.handle_choose();
+            }
+        });
+        tab1旅店RadioButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                tab1.handle_choose();
+            }
+        });
+    }
 
     public static void main(String[] args) {
-        JFrame frame = new JFrame("newform");
+        JFrame frame = new JFrame("数据库作业1");
         frame.setContentPane(new newform().panel1);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
+
     }
 
-    private JTabbedPane tabbedPane1;
-    private JButton button4;
-    private JButton button5;
-    private JRadioButton 航班RadioButton;
-    private JRadioButton 用户信息RadioButton;
-    private JRadioButton 旅店RadioButton;
-    private JRadioButton 车辆RadioButton;
-    private JTable 编辑区table;
-    private JTable 查询结果table;
-    private JButton 插入Button;
-    private JButton 删除Button;
-    private JButton 更新Button;
-    private JButton 查询Button;
-
-    {
-
-        String[][] data = {
-                { "Kundan Kumar Jha", "4031", "CSE" },
-                { "Anand Jha", "6014", "IT" }
-        };
-        JTable tbl = new JTable();
-        DefaultTableModel dtm = new DefaultTableModel(0, 0);
-        String header[] = new String[] { "Prority", "Task Title", "Start",
-                "Pause", "Stop", "Statulses" };
-
-        dtm.setColumnIdentifiers(header);
-        //dtm.setRowCount(1);
-        编辑区table.setModel(dtm);
-
-
-
-        // add row dynamically into the table
-        for (int count = 1; count <= 1; count++) {
-            dtm.addRow(new Object[] { "data", "data", "data",
-                    "data", "data", "data" });
-        }
-
-        //编辑区table.setPreferredScrollableViewportSize(编辑区table.getPreferredSize());
-        //编辑区table.setFillsViewportHeight(true);
-
+    { // 建立数据库连接
         String driverName = "oracle.jdbc.OracleDriver"; // for Oracle
         try {
             Class.forName(driverName);
         } catch (ClassNotFoundException e) {
-            System.out.println("ClassNotFoundException : "+e.getMessage());
+            System.out.println("ClassNotFoundException : " + e.getMessage());
+            JOptionPane.showMessageDialog(null, "错误：找不到驱动"+driverName+"!");
+            System.exit(1);
         }
-        Connection connection = null;
+
         String url = "jdbc:oracle:thin:@localhost:1521:orcl"; // for Oracle
         try {
             connection = DriverManager.getConnection(url, "wangyu", "123456");
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            JOptionPane.showMessageDialog(null, "错误：数据库连接建立失败！");
+            System.exit(1);
         }
-        catch (SQLException e) {
-                System.out.println(e.getMessage());
-            }
 
         Statement stmt = null;
         String query = " SELECT * from table1";
@@ -85,38 +96,18 @@ public class newform extends JFrame {
             ResultSet rs = stmt.executeQuery(query);
             while (rs.next()) {
                 String id = rs.getString(1); // or rs.getString("NAME");
-                String name= rs.getString(2);
-                System.out.println(id+name);
+                String name = rs.getString(2);
+                System.out.println(id + name);
             }
             stmt.close();
-        } catch (SQLException e ) {
+        } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
 
         System.out.println("done");
     }
-    {
-        DefaultTableModel dtm = new DefaultTableModel(0, 0) {
-            @Override
-            public boolean isCellEditable(int row, int column) {
-                return false;
-            }
-        };
-        String header[] = new String[] { "Prority", "Task Title", "Start",
-                "Pause", "Stop", "Statulses" };
-
-        dtm.setColumnIdentifiers(header);
-        //dtm.setRowCount(1);
-        查询结果table.setModel(dtm);
-
-        // add row dynamically into the table
-        for (int count = 1; count <= 10; count++) {
-            dtm.addRow(new Object[] { "data", "data", "data",
-                    "data", "data", "data" });
-        }
-    }
-
     private void createUIComponents() {
         // TODO: place custom component creation code here
     }
+
 }
