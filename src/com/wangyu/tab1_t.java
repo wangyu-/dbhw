@@ -13,6 +13,21 @@ public class tab1_t {
     DefaultTableModel dtm编辑区,dtm查询区;
     String header[];
 
+    public tab1_t(newform p)
+    {
+        parent=p;
+        dtm编辑区=new DefaultTableModel(1, 0);
+        dtm查询区=new DefaultTableModel(0, 0){
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                return false;
+            }
+        };
+        parent.tab1查询结果table.setModel(dtm查询区);
+        parent.tab1操作区table.setModel(dtm编辑区);
+        dtm编辑区.setRowCount(1);
+    }
+
     void check_vaild()
     {
         if(!parent.tab1航班RadioButton.isSelected()&&!parent.tab1旅店RadioButton.isSelected()&&!parent.tab1车辆RadioButton.isSelected()&&!parent.tab1用户信息RadioButton.isSelected())
@@ -260,19 +275,6 @@ public class tab1_t {
             return;
         }
     }
-    public tab1_t(newform p)
-    {
-        parent=p;
-        dtm编辑区=new DefaultTableModel(1, 0);
-        dtm查询区=new DefaultTableModel(0, 0){
-            @Override
-            public boolean isCellEditable(int row, int column) {
-                return false;
-            }
-        };
-        parent.tab1查询结果table.setModel(dtm查询区);
-        parent.tab1操作区table.setModel(dtm编辑区);
-        dtm编辑区.setRowCount(1);
-    }
+
 
 }
