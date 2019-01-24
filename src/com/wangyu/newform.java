@@ -1,6 +1,8 @@
 package com.wangyu;
 
 import javax.swing.*;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -30,9 +32,16 @@ public class newform extends JFrame {
     public JTextArea textArea1;
     public JButton button1;
     public tab1_t tab1;
-    public Connection connection = null;
+    public Connection connection;
+    public Statement statement;
 
+    public Connection connection_trans;
+    public Statement statement_trans;
+    {
+        tab1查询结果table.putClientProperty("terminateEditOnFocusLost", Boolean.TRUE);
+    }
     public newform() {
+        tab1查询结果table.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         tab1= new tab1_t(this);
         tab1.handle_choose();
         tab1航班RadioButton.addActionListener(new ActionListener() {
@@ -59,6 +68,42 @@ public class newform extends JFrame {
                 tab1.handle_choose();
             }
         });
+        tab1插入Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (tab1操作区table.isEditing())
+                    tab1操作区table.getCellEditor().stopCellEditing();
+                tab1.handle_insert();
+            }
+        });
+        tab1查询Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                tab1.handle_list();
+            }
+        });
+
+        tab1查询结果table.getSelectionModel().addListSelectionListener(new ListSelectionListener(){
+            public void valueChanged(ListSelectionEvent event) {
+                tab1.handle_select_row();
+            }
+        });
+        tab1删除Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (tab1操作区table.isEditing())
+                    tab1操作区table.getCellEditor().stopCellEditing();
+                tab1.handle_delete();
+            }
+        });
+        tab1更新Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (tab1操作区table.isEditing())
+                    tab1操作区table.getCellEditor().stopCellEditing();
+                tab1.handle_update();
+            }
+        });
     }
 
     public static void main(String[] args) {
@@ -83,25 +128,22 @@ public class newform extends JFrame {
         String url = "jdbc:oracle:thin:@localhost:1521:orcl"; // for Oracle
         try {
             connection = DriverManager.getConnection(url, "wangyu", "123456");
+            connection_trans = DriverManager.getConnection(url, "wangyu", "123456");
+            connection_trans.setAutoCommit(false);
         } catch (SQLException e) {
             System.out.println(e.getMessage());
             JOptionPane.showMessageDialog(null, "错误：数据库连接建立失败！");
             System.exit(1);
         }
 
-        Statement stmt = null;
-        String query = " SELECT * from table1";
         try {
-            stmt = connection.createStatement();
-            ResultSet rs = stmt.executeQuery(query);
-            while (rs.next()) {
-                String id = rs.getString(1); // or rs.getString("NAME");
-                String name = rs.getString(2);
-                System.out.println(id + name);
-            }
-            stmt.close();
-        } catch (SQLException e) {
+            statement = connection.createStatement();
+            statement_trans = connection_trans.createStatement();
+        }
+        catch (SQLException e) {
             System.out.println(e.getMessage());
+            JOptionPane.showMessageDialog(null, "错误：创建statement出错！");
+            System.exit(1);
         }
 
         System.out.println("done");
