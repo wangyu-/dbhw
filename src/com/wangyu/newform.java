@@ -4,6 +4,7 @@ import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import javax.swing.table.DefaultTableModel;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -13,9 +14,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import java.text.DateFormat;
+import java.util.Date;
+
 public class newform extends JFrame {
     public JPanel panel1;
-    public JTabbedPane tabbedPane1;
     public JRadioButton tab1航班RadioButton;
     public JRadioButton tab1用户信息RadioButton;
     public JRadioButton tab1旅店RadioButton;
@@ -26,9 +29,6 @@ public class newform extends JFrame {
     public JButton tab1删除Button;
     public JButton tab1更新Button;
     public JButton tab1查询Button;
-    public JTextField textField1;
-    public JTextArea textArea1;
-    public JButton button1;
     public JTextField tab2编号table;
     public JComboBox tab2类型combo;
     public JTextField tab2用户名input;
@@ -48,6 +48,11 @@ public class newform extends JFrame {
     public JButton tab4查询所有button;
     public JButton tab4查询指定button;
     public JTable tab4查询结果table;
+    public JTabbedPane tabbedPane1;
+    public JTextField textField1;
+    public JTextArea textArea1;
+    public JButton button1;
+    public JPanel datepanel;
     public tab1_t tab1;
     public tab2_t tab2;
     public tab3_t tab3;
@@ -67,6 +72,8 @@ public class newform extends JFrame {
         tab2= new tab2_t(this);
         tab3= new tab3_t(this);
         tab4= new tab4_t(this);
+        datepanel.setLayout(new BorderLayout());
+        datepanel.add(new ClockPane(), BorderLayout.SOUTH);
 
         tab1航班RadioButton.addActionListener(new ActionListener() {
             @Override
@@ -231,4 +238,31 @@ public class newform extends JFrame {
         // TODO: place custom component creation code here
     }
 
+    class ClockPane extends JPanel {
+
+        private JLabel clock = new JLabel();
+
+        public ClockPane() {
+            setLayout(new BorderLayout());
+            Font font = new Font("Serif", Font.BOLD, 24);
+            clock.setFont(font);
+
+            tickTock();
+            add(clock);
+            Timer timer = new Timer(500, new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    tickTock();
+                }
+            });
+            timer.setRepeats(true);
+            timer.setCoalesce(true);
+            timer.setInitialDelay(0);
+            timer.start();
+        }
+
+        public void tickTock() {
+            clock.setText("sa18225349   "+DateFormat.getDateTimeInstance().format(new Date()));
+        }
+    }
 }

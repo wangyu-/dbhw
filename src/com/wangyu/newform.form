@@ -7,14 +7,21 @@
     <properties/>
     <border type="none"/>
     <children>
-      <tabbedpane id="5cd41" binding="tabbedPane1" default-binding="true">
+      <grid id="fbedf" binding="datepanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints border-constraint="South"/>
+        <properties/>
+        <border type="none"/>
+        <children/>
+      </grid>
+      <tabbedpane id="7d94" binding="tabbedPane1" default-binding="true">
         <constraints border-constraint="Center"/>
         <properties>
           <enabled value="true"/>
         </properties>
         <border type="none"/>
         <children>
-          <grid id="53f91" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+          <grid id="ea1e" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
               <tabbedpane title="基本信息录入/查询"/>
@@ -22,7 +29,7 @@
             <properties/>
             <border type="none"/>
             <children>
-              <grid id="e26dd" layout-manager="GridLayoutManager" row-count="1" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+              <grid id="c07bd" layout-manager="GridLayoutManager" row-count="1" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -30,7 +37,7 @@
                 <properties/>
                 <border type="none" title="选择数据"/>
                 <children>
-                  <component id="148d9" class="javax.swing.JRadioButton" binding="tab1航班RadioButton">
+                  <component id="b48c9" class="javax.swing.JRadioButton" binding="tab1航班RadioButton">
                     <constraints>
                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
@@ -39,7 +46,7 @@
                       <text value="航班"/>
                     </properties>
                   </component>
-                  <component id="c5ad3" class="javax.swing.JRadioButton" binding="tab1用户信息RadioButton">
+                  <component id="d093b" class="javax.swing.JRadioButton" binding="tab1用户信息RadioButton">
                     <constraints>
                       <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
@@ -47,7 +54,7 @@
                       <text value="用户信息"/>
                     </properties>
                   </component>
-                  <component id="612af" class="javax.swing.JRadioButton" binding="tab1旅店RadioButton">
+                  <component id="c63e6" class="javax.swing.JRadioButton" binding="tab1旅店RadioButton">
                     <constraints>
                       <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
@@ -55,7 +62,7 @@
                       <text value="旅店"/>
                     </properties>
                   </component>
-                  <component id="dd60c" class="javax.swing.JRadioButton" binding="tab1车辆RadioButton">
+                  <component id="52b83" class="javax.swing.JRadioButton" binding="tab1车辆RadioButton">
                     <constraints>
                       <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
@@ -66,21 +73,21 @@
                   </component>
                 </children>
               </grid>
-              <grid id="23e88" layout-manager="BorderLayout" hgap="0" vgap="0">
+              <grid id="95e21" layout-manager="BorderLayout" hgap="0" vgap="0">
                 <constraints>
                   <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties/>
                 <border type="none" title="操作区"/>
                 <children>
-                  <scrollpane id="b854e">
+                  <scrollpane id="2fdfd">
                     <constraints border-constraint="Center"/>
                     <properties>
                       <verticalScrollBarPolicy value="21"/>
                     </properties>
                     <border type="none"/>
                     <children>
-                      <component id="28158" class="javax.swing.JTable" binding="tab1操作区table">
+                      <component id="a518f" class="javax.swing.JTable" binding="tab1操作区table">
                         <constraints/>
                         <properties>
                           <fillsViewportHeight value="false"/>
@@ -89,13 +96,13 @@
                       </component>
                     </children>
                   </scrollpane>
-                  <grid id="6fcab" layout-manager="GridLayoutManager" row-count="1" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                  <grid id="4f23" layout-manager="GridLayoutManager" row-count="1" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                     <margin top="0" left="0" bottom="0" right="0"/>
                     <constraints border-constraint="South"/>
                     <properties/>
                     <border type="none"/>
                     <children>
-                      <component id="e57df" class="javax.swing.JButton" binding="tab1插入Button">
+                      <component id="1d696" class="javax.swing.JButton" binding="tab1插入Button">
                         <constraints>
                           <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                         </constraints>
@@ -103,7 +110,7 @@
                           <text value="插入"/>
                         </properties>
                       </component>
-                      <component id="d8512" class="javax.swing.JButton" binding="tab1删除Button">
+                      <component id="43d3e" class="javax.swing.JButton" binding="tab1删除Button">
                         <constraints>
                           <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                         </constraints>
@@ -111,7 +118,7 @@
                           <text value="删除"/>
                         </properties>
                       </component>
-                      <component id="b4123" class="javax.swing.JButton" binding="tab1更新Button">
+                      <component id="eff27" class="javax.swing.JButton" binding="tab1更新Button">
                         <constraints>
                           <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                         </constraints>
@@ -119,12 +126,12 @@
                           <text value="更新"/>
                         </properties>
                       </component>
-                      <hspacer id="b3303">
+                      <hspacer id="dd75d">
                         <constraints>
                           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                         </constraints>
                       </hspacer>
-                      <component id="a2a78" class="javax.swing.JButton" binding="tab1查询Button">
+                      <component id="3c97c" class="javax.swing.JButton" binding="tab1查询Button">
                         <constraints>
                           <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                         </constraints>
@@ -136,7 +143,7 @@
                   </grid>
                 </children>
               </grid>
-              <grid id="d5d51" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+              <grid id="a220d" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
                   <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -144,14 +151,14 @@
                 <properties/>
                 <border type="none" title="查询结果"/>
                 <children>
-                  <scrollpane id="2f035">
+                  <scrollpane id="4d0a7">
                     <constraints>
                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties/>
                     <border type="none"/>
                     <children>
-                      <component id="faa8b" class="javax.swing.JTable" binding="tab1查询结果table">
+                      <component id="26bcb" class="javax.swing.JTable" binding="tab1查询结果table">
                         <constraints/>
                         <properties>
                           <fillsViewportHeight value="true"/>
@@ -164,7 +171,7 @@
               </grid>
             </children>
           </grid>
-          <grid id="8fea5" layout-manager="GridLayoutManager" row-count="3" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+          <grid id="e43c9" layout-manager="GridLayoutManager" row-count="3" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
               <tabbedpane title="预定/查询预定"/>
@@ -172,7 +179,7 @@
             <properties/>
             <border type="none"/>
             <children>
-              <grid id="70acf" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+              <grid id="2a6a8" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
                   <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -180,14 +187,14 @@
                 <properties/>
                 <border type="none" title="查询结果"/>
                 <children>
-                  <scrollpane id="84fbc">
+                  <scrollpane id="ea27c">
                     <constraints>
                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties/>
                     <border type="none"/>
                     <children>
-                      <component id="672c4" class="javax.swing.JTable" binding="tab2查询结果table">
+                      <component id="4cb7a" class="javax.swing.JTable" binding="tab2查询结果table">
                         <constraints/>
                         <properties>
                           <fillsViewportHeight value="true"/>
@@ -198,7 +205,7 @@
                   </scrollpane>
                 </children>
               </grid>
-              <grid id="72155" layout-manager="GridLayoutManager" row-count="4" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+              <grid id="159d1" layout-manager="GridLayoutManager" row-count="4" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -206,7 +213,7 @@
                 <properties/>
                 <border type="none" title="预定/退订"/>
                 <children>
-                  <component id="af2f6" class="javax.swing.JTextField" binding="tab2用户名input">
+                  <component id="1330a" class="javax.swing.JTextField" binding="tab2用户名input">
                     <constraints>
                       <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                         <preferred-size width="150" height="-1"/>
@@ -214,7 +221,7 @@
                     </constraints>
                     <properties/>
                   </component>
-                  <component id="6d50d" class="javax.swing.JTextField" binding="tab2编号table">
+                  <component id="555a8" class="javax.swing.JTextField" binding="tab2编号table">
                     <constraints>
                       <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                         <preferred-size width="150" height="-1"/>
@@ -222,13 +229,13 @@
                     </constraints>
                     <properties/>
                   </component>
-                  <component id="6da92" class="javax.swing.JComboBox" binding="tab2类型combo">
+                  <component id="4a6e3" class="javax.swing.JComboBox" binding="tab2类型combo">
                     <constraints>
                       <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties/>
                   </component>
-                  <component id="c76dc" class="javax.swing.JLabel">
+                  <component id="86171" class="javax.swing.JLabel">
                     <constraints>
                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
@@ -237,7 +244,7 @@
                       <verifyInputWhenFocusTarget value="false"/>
                     </properties>
                   </component>
-                  <component id="276b6" class="javax.swing.JLabel">
+                  <component id="5423b" class="javax.swing.JLabel">
                     <constraints>
                       <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
@@ -245,7 +252,7 @@
                       <text value="请选择类型："/>
                     </properties>
                   </component>
-                  <component id="907f7" class="javax.swing.JLabel">
+                  <component id="d7e25" class="javax.swing.JLabel">
                     <constraints>
                       <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
@@ -253,7 +260,7 @@
                       <text value="请输入资源编号："/>
                     </properties>
                   </component>
-                  <grid id="d9557" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                  <grid id="de6ed" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                     <margin top="0" left="0" bottom="0" right="0"/>
                     <constraints>
                       <grid row="3" column="0" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -261,7 +268,7 @@
                     <properties/>
                     <border type="none"/>
                     <children>
-                      <component id="b98cc" class="javax.swing.JButton" binding="tab2预定button">
+                      <component id="f1550" class="javax.swing.JButton" binding="tab2预定button">
                         <constraints>
                           <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                         </constraints>
@@ -269,12 +276,12 @@
                           <text value="预定"/>
                         </properties>
                       </component>
-                      <hspacer id="b7615">
+                      <hspacer id="51fec">
                         <constraints>
                           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                         </constraints>
                       </hspacer>
-                      <component id="d4f9d" class="javax.swing.JButton" binding="tab2退订button">
+                      <component id="e5e1b" class="javax.swing.JButton" binding="tab2退订button">
                         <constraints>
                           <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                         </constraints>
@@ -286,25 +293,25 @@
                   </grid>
                 </children>
               </grid>
-              <grid id="58078" layout-manager="BorderLayout" hgap="0" vgap="0">
+              <grid id="51c92" layout-manager="BorderLayout" hgap="0" vgap="0">
                 <constraints>
                   <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties/>
                 <border type="none" title="查询"/>
                 <children>
-                  <grid id="79aac" layout-manager="GridLayoutManager" row-count="1" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                  <grid id="ed5c3" layout-manager="GridLayoutManager" row-count="1" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                     <margin top="0" left="0" bottom="0" right="0"/>
                     <constraints border-constraint="South"/>
                     <properties/>
                     <border type="none"/>
                     <children>
-                      <hspacer id="ad35a">
+                      <hspacer id="5940d">
                         <constraints>
                           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                         </constraints>
                       </hspacer>
-                      <component id="60814" class="javax.swing.JButton" binding="tab2查询所有button">
+                      <component id="20ca5" class="javax.swing.JButton" binding="tab2查询所有button">
                         <constraints>
                           <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                         </constraints>
@@ -312,7 +319,7 @@
                           <text value="查询所有用户的预定"/>
                         </properties>
                       </component>
-                      <component id="65927" class="javax.swing.JButton" binding="tab2查询指定button">
+                      <component id="9a8ca" class="javax.swing.JButton" binding="tab2查询指定button">
                         <constraints>
                           <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                         </constraints>
@@ -326,7 +333,7 @@
               </grid>
             </children>
           </grid>
-          <grid id="44300" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+          <grid id="72fff" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
               <tabbedpane title="查询路径"/>
@@ -334,7 +341,7 @@
             <properties/>
             <border type="none"/>
             <children>
-              <grid id="38408" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+              <grid id="65f3" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
                   <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -342,14 +349,14 @@
                 <properties/>
                 <border type="none" title="查询结果"/>
                 <children>
-                  <scrollpane id="27489">
+                  <scrollpane id="7da9d">
                     <constraints>
                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties/>
                     <border type="none"/>
                     <children>
-                      <component id="1b941" class="javax.swing.JTable" binding="tab3查询结果table">
+                      <component id="8058" class="javax.swing.JTable" binding="tab3查询结果table">
                         <constraints/>
                         <properties>
                           <fillsViewportHeight value="true"/>
@@ -360,7 +367,7 @@
                   </scrollpane>
                 </children>
               </grid>
-              <grid id="6afa4" layout-manager="GridLayoutManager" row-count="2" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+              <grid id="54841" layout-manager="GridLayoutManager" row-count="2" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -368,7 +375,7 @@
                 <properties/>
                 <border type="none" title="查询路径"/>
                 <children>
-                  <component id="9cd7" class="javax.swing.JLabel">
+                  <component id="334b6" class="javax.swing.JLabel">
                     <constraints>
                       <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
@@ -376,7 +383,7 @@
                       <text value="请输入用户名："/>
                     </properties>
                   </component>
-                  <component id="e50c9" class="javax.swing.JTextField" binding="tab3用户名input">
+                  <component id="5bc38" class="javax.swing.JTextField" binding="tab3用户名input">
                     <constraints>
                       <grid row="0" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                         <preferred-size width="150" height="-1"/>
@@ -384,7 +391,7 @@
                     </constraints>
                     <properties/>
                   </component>
-                  <component id="869c8" class="javax.swing.JButton" binding="tab3查询Button">
+                  <component id="74322" class="javax.swing.JButton" binding="tab3查询Button">
                     <constraints>
                       <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                     </constraints>
@@ -392,7 +399,7 @@
                       <text value="查询用户的旅行路径"/>
                     </properties>
                   </component>
-                  <hspacer id="81ad8">
+                  <hspacer id="8b779">
                     <constraints>
                       <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                     </constraints>
@@ -401,7 +408,7 @@
               </grid>
             </children>
           </grid>
-          <grid id="1265a" layout-manager="GridLayoutManager" row-count="3" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+          <grid id="63669" layout-manager="GridLayoutManager" row-count="3" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
               <tabbedpane title="紧急联系人"/>
@@ -409,7 +416,7 @@
             <properties/>
             <border type="none"/>
             <children>
-              <grid id="fc849" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+              <grid id="bb1f6" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
                   <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -417,14 +424,14 @@
                 <properties/>
                 <border type="none" title="查询结果"/>
                 <children>
-                  <scrollpane id="a43f0">
+                  <scrollpane id="2b2a8">
                     <constraints>
                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties/>
                     <border type="none"/>
                     <children>
-                      <component id="2fefd" class="javax.swing.JTable" binding="tab4查询结果table">
+                      <component id="9e125" class="javax.swing.JTable" binding="tab4查询结果table">
                         <constraints/>
                         <properties>
                           <fillsViewportHeight value="true"/>
@@ -435,7 +442,7 @@
                   </scrollpane>
                 </children>
               </grid>
-              <grid id="eb668" layout-manager="GridLayoutManager" row-count="4" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+              <grid id="f03bc" layout-manager="GridLayoutManager" row-count="4" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -443,7 +450,7 @@
                 <properties/>
                 <border type="none" title="增加/删除紧急联系人"/>
                 <children>
-                  <component id="90294" class="javax.swing.JTextField" binding="tab4用户名input">
+                  <component id="4df8b" class="javax.swing.JTextField" binding="tab4用户名input">
                     <constraints>
                       <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                         <preferred-size width="150" height="-1"/>
@@ -451,7 +458,7 @@
                     </constraints>
                     <properties/>
                   </component>
-                  <component id="27a36" class="javax.swing.JTextField" binding="tab4电话号input">
+                  <component id="56743" class="javax.swing.JTextField" binding="tab4电话号input">
                     <constraints>
                       <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                         <preferred-size width="150" height="-1"/>
@@ -459,7 +466,7 @@
                     </constraints>
                     <properties/>
                   </component>
-                  <component id="8e08e" class="javax.swing.JLabel">
+                  <component id="5b9f9" class="javax.swing.JLabel">
                     <constraints>
                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
@@ -468,7 +475,7 @@
                       <verifyInputWhenFocusTarget value="false"/>
                     </properties>
                   </component>
-                  <component id="1b054" class="javax.swing.JLabel">
+                  <component id="6a9ba" class="javax.swing.JLabel">
                     <constraints>
                       <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
@@ -476,7 +483,7 @@
                       <text value="请输入联系人姓名："/>
                     </properties>
                   </component>
-                  <component id="80c3b" class="javax.swing.JLabel">
+                  <component id="d3370" class="javax.swing.JLabel">
                     <constraints>
                       <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
@@ -484,7 +491,7 @@
                       <text value="请输入电话号："/>
                     </properties>
                   </component>
-                  <grid id="67061" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                  <grid id="bf7c9" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                     <margin top="0" left="0" bottom="0" right="0"/>
                     <constraints>
                       <grid row="3" column="0" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -492,7 +499,7 @@
                     <properties/>
                     <border type="none"/>
                     <children>
-                      <component id="a0bbb" class="javax.swing.JButton" binding="tab4增加button">
+                      <component id="d6bfb" class="javax.swing.JButton" binding="tab4增加button">
                         <constraints>
                           <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                         </constraints>
@@ -500,12 +507,12 @@
                           <text value="增加"/>
                         </properties>
                       </component>
-                      <hspacer id="918cb">
+                      <hspacer id="bcf3f">
                         <constraints>
                           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                         </constraints>
                       </hspacer>
-                      <component id="5cb92" class="javax.swing.JButton" binding="tab4删除button">
+                      <component id="35a9" class="javax.swing.JButton" binding="tab4删除button">
                         <constraints>
                           <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                         </constraints>
@@ -515,7 +522,7 @@
                       </component>
                     </children>
                   </grid>
-                  <component id="90380" class="javax.swing.JTextField" binding="tab4联系人input">
+                  <component id="29b33" class="javax.swing.JTextField" binding="tab4联系人input">
                     <constraints>
                       <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                         <preferred-size width="150" height="-1"/>
@@ -525,25 +532,25 @@
                   </component>
                 </children>
               </grid>
-              <grid id="4b20a" layout-manager="BorderLayout" hgap="0" vgap="0">
+              <grid id="d389c" layout-manager="BorderLayout" hgap="0" vgap="0">
                 <constraints>
                   <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties/>
                 <border type="none" title="查询"/>
                 <children>
-                  <grid id="5cdd6" layout-manager="GridLayoutManager" row-count="1" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                  <grid id="9cfb8" layout-manager="GridLayoutManager" row-count="1" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                     <margin top="0" left="0" bottom="0" right="0"/>
                     <constraints border-constraint="South"/>
                     <properties/>
                     <border type="none"/>
                     <children>
-                      <hspacer id="6fe4c">
+                      <hspacer id="5c86a">
                         <constraints>
                           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                         </constraints>
                       </hspacer>
-                      <component id="ed360" class="javax.swing.JButton" binding="tab4查询所有button">
+                      <component id="59fef" class="javax.swing.JButton" binding="tab4查询所有button">
                         <constraints>
                           <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                         </constraints>
@@ -551,7 +558,7 @@
                           <text value="查询所有用户的联系人"/>
                         </properties>
                       </component>
-                      <component id="98e51" class="javax.swing.JButton" binding="tab4查询指定button">
+                      <component id="d6d8f" class="javax.swing.JButton" binding="tab4查询指定button">
                         <constraints>
                           <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                         </constraints>
@@ -565,7 +572,7 @@
               </grid>
             </children>
           </grid>
-          <grid id="d9e8f" layout-manager="GridLayoutManager" row-count="3" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+          <grid id="c40e7" layout-manager="GridLayoutManager" row-count="3" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
               <tabbedpane title="其他功能"/>
@@ -573,7 +580,7 @@
             <properties/>
             <border type="none"/>
             <children>
-              <component id="e55f3" class="javax.swing.JTextField" binding="textField1" default-binding="true">
+              <component id="4593a" class="javax.swing.JTextField" binding="textField1" default-binding="true">
                 <constraints>
                   <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="190" height="24"/>
@@ -583,7 +590,7 @@
                   <text value=""/>
                 </properties>
               </component>
-              <component id="5d064" class="javax.swing.JTextArea" binding="textArea1" default-binding="true">
+              <component id="1e86e" class="javax.swing.JTextArea" binding="textArea1" default-binding="true">
                 <constraints>
                   <grid row="0" column="1" row-span="2" col-span="2" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="50"/>
@@ -591,7 +598,7 @@
                 </constraints>
                 <properties/>
               </component>
-              <component id="cc19" class="javax.swing.JLabel">
+              <component id="a34e4" class="javax.swing.JLabel">
                 <constraints>
                   <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
@@ -599,7 +606,7 @@
                   <text value="Label"/>
                 </properties>
               </component>
-              <grid id="9e498" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+              <grid id="36d2d" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
                   <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -607,7 +614,7 @@
                 <properties/>
                 <border type="none"/>
                 <children>
-                  <scrollpane id="b5cfc">
+                  <scrollpane id="53530">
                     <constraints>
                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                     </constraints>
@@ -615,14 +622,14 @@
                     <border type="none"/>
                     <children/>
                   </scrollpane>
-                  <vspacer id="afb8b">
+                  <vspacer id="4f09c">
                     <constraints>
                       <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
                     </constraints>
                   </vspacer>
                 </children>
               </grid>
-              <component id="4184e" class="javax.swing.JButton" binding="button1" default-binding="true">
+              <component id="37d10" class="javax.swing.JButton" binding="button1" default-binding="true">
                 <constraints>
                   <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
@@ -631,6 +638,15 @@
                 </properties>
               </component>
             </children>
+          </grid>
+          <grid id="9e013" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <tabbedpane title="Untitled"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children/>
           </grid>
         </children>
       </tabbedpane>
