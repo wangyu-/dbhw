@@ -157,6 +157,15 @@ public class tab1_t {
             {
                 parent.statement_trans.executeUpdate(String.format("delete from FLIGHTS WHERE ID='%s'",uni_id));
             }
+            if(parent.tab1旅店RadioButton.isSelected())
+            {
+                parent.statement_trans.executeUpdate(String.format("delete from HOTELS WHERE ID='%s'",uni_id));
+            }
+
+            if(parent.tab1车辆RadioButton.isSelected())
+            {
+                parent.statement_trans.executeUpdate(String.format("delete from CARS WHERE ID='%s'",uni_id));
+            }
             parent.statement_trans.executeUpdate(String.format("delete from RESOURCES where uni_id='%s'",uni_id));
             parent.connection_trans.commit();
         }
@@ -196,6 +205,18 @@ public class tab1_t {
                 String ariv_city=parent.tab1操作区table.getModel().getValueAt(0,6).toString();
                 parent.statement_trans.executeUpdate(String.format("UPDATE FLIGHTS SET FLIGHT_NUM='%s',FROM_CITY='%s',ARIV_CITY='%s' WHERE ID='%s'",flight_num,from_city,ariv_city,uni_id));
             }
+            if(parent.tab1旅店RadioButton.isSelected())
+            {
+                String name=parent.tab1操作区table.getModel().getValueAt(0,4).toString();
+                String loc=parent.tab1操作区table.getModel().getValueAt(0,5).toString();
+                parent.statement_trans.executeUpdate(String.format("UPDATE HOTELS SET NAME='%s',LOCATION='%s' WHERE ID='%s'",name,loc,uni_id));
+            }
+            if(parent.tab1车辆RadioButton.isSelected())
+            {
+                String type=parent.tab1操作区table.getModel().getValueAt(0,4).toString();
+                String loc=parent.tab1操作区table.getModel().getValueAt(0,5).toString();
+                parent.statement_trans.executeUpdate(String.format("UPDATE CARS SET TYPE='%s',LOCATION='%s' WHERE ID='%s'",type,loc,uni_id));
+            }
             parent.connection_trans.commit();
         }
         catch (SQLException e) {
@@ -223,7 +244,18 @@ public class tab1_t {
 
         dtm查询区.setRowCount(0);
         try {
-            ResultSet rs = parent.statement.executeQuery("select UNI_ID,PRICE,NUM_TOTAL,NUM_AVIAL,FLIGHT_NUM,FROM_CITY,ARIV_CITY from RESOURCES,flights where RESOURCES.UNI_ID=FLIGHTS.ID");
+
+            ResultSet rs=null ;
+            if(parent.tab1航班RadioButton.isSelected()) {
+                rs = parent.statement.executeQuery("select UNI_ID,PRICE,NUM_TOTAL,NUM_AVIAL,FLIGHT_NUM,FROM_CITY,ARIV_CITY from RESOURCES,flights where RESOURCES.UNI_ID=FLIGHTS.ID");
+            }
+            else if(parent.tab1旅店RadioButton.isSelected()) {
+                rs = parent.statement.executeQuery("select UNI_ID,PRICE,NUM_TOTAL,NUM_AVIAL,NAME,LOCATION from RESOURCES,hotels where RESOURCES.UNI_ID=HOTELS.ID");
+            }
+            else if(parent.tab1车辆RadioButton.isSelected())
+            {
+                rs = parent.statement.executeQuery("select UNI_ID,PRICE,NUM_TOTAL,NUM_AVIAL,TYPE,LOCATION from RESOURCES,cars where RESOURCES.UNI_ID=CARS.ID");
+            }
             while (rs.next()) {
                 int cnt=rs.getMetaData().getColumnCount();
                 List<String> row = new ArrayList<String>();
@@ -233,7 +265,7 @@ public class tab1_t {
                 dtm查询区.addRow(row.toArray());
             }
         } catch (SQLException e ) {
-
+            JOptionPane.showMessageDialog(null,e.getMessage());
         }
     }
 
@@ -258,6 +290,18 @@ public class tab1_t {
                 String from_city=parent.tab1操作区table.getModel().getValueAt(0,5).toString();
                 String ariv_city=parent.tab1操作区table.getModel().getValueAt(0,6).toString();
                 parent.statement_trans.executeUpdate(String.format("INSERT INTO FLIGHTS VALUES ('%s','%s','%s','%s')",uni_id,flight_num,from_city,ariv_city));
+            }
+            if(parent.tab1旅店RadioButton.isSelected())
+            {
+                String name=parent.tab1操作区table.getModel().getValueAt(0,4).toString();
+                String loc=parent.tab1操作区table.getModel().getValueAt(0,5).toString();
+                parent.statement_trans.executeUpdate(String.format("INSERT INTO HOTELS VALUES ('%s','%s','%s')",uni_id,name,loc));
+            }
+            if(parent.tab1车辆RadioButton.isSelected())
+            {
+                String type=parent.tab1操作区table.getModel().getValueAt(0,4).toString();
+                String loc=parent.tab1操作区table.getModel().getValueAt(0,5).toString();
+                parent.statement_trans.executeUpdate(String.format("INSERT INTO CARS VALUES ('%s','%s','%s')",uni_id,type,loc));
             }
             parent.connection_trans.commit();
         }
