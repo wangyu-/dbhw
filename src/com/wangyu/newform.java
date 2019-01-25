@@ -40,9 +40,18 @@ public class newform extends JFrame {
     public JButton tab3查询Button;
     public JTable tab2查询结果table;
     public JTable tab3查询结果table;
+    public JButton tab4增加button;
+    public JButton tab4删除button;
+    public JTextField tab4用户名input;
+    public JTextField tab4联系人input;
+    public JTextField tab4电话号input;
+    public JButton tab4查询所有button;
+    public JButton tab4查询指定button;
+    public JTable tab4查询结果table;
     public tab1_t tab1;
     public tab2_t tab2;
     public tab3_t tab3;
+    public tab4_t tab4;
     public Connection connection;
     public Statement statement;
 
@@ -57,6 +66,7 @@ public class newform extends JFrame {
         tab1.handle_choose();
         tab2= new tab2_t(this);
         tab3= new tab3_t(this);
+        tab4= new tab4_t(this);
 
         tab1航班RadioButton.addActionListener(new ActionListener() {
             @Override
@@ -146,6 +156,31 @@ public class newform extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 tab3.query_route();
+            }
+        });
+
+        tab4增加button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                tab4.add_contract();
+            }
+        });
+        tab4删除button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                tab4.del_contract();
+            }
+        });
+        tab4查询所有button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                tab4.query_all();
+            }
+        });
+        tab4查询指定button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                tab4.query_single();
             }
         });
     }
