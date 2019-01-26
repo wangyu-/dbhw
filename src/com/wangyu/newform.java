@@ -232,7 +232,7 @@ public class newform extends JFrame {
             System.exit(1);
         }
 
-        System.out.println("done");
+        //System.out.println("done");
     }
     private void createUIComponents() {
         // TODO: place custom component creation code here
